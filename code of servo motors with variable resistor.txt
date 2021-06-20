@@ -1,0 +1,14 @@
+#include <Servo.h>
+int x=0;
+Servo  Amer;  
+void setup()
+{
+  Amer.attach(8);
+}
+void loop()
+{
+  x=analogRead(A0); 
+  x=map(x,0,1023,15,170);
+  Amer.write(x);
+  
+}
